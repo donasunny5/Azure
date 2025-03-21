@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [Rank]\n,[Team/NOC]\n,[Gold]\n,[Silver]\n,[Bronze]\n,[Total]\n,[Rank_by_Total]\n FROM [OlympicsDB].[dbo].[medals]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "OlympicsDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

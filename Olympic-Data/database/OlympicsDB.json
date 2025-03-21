@@ -1,0 +1,25 @@
+{
+	"name": "OlympicsDB",
+	"properties": {
+		"Name": "OlympicsDB",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://olympic-data@azureprojectsdona.dfs.core.windows.net/OlympicsDB",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "az-projectsdona-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 4,
+		"ObjectId": "5fd1af68-42f5-465d-96d1-a52e734b68d6"
+	},
+	"type": "DATABASE"
+}

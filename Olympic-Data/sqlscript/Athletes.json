@@ -1,5 +1,5 @@
 {
-	"name": "SQL script 2",
+	"name": "Athletes",
 	"properties": {
 		"content": {
 			"query": "--count the number of athletes from each country\nselect NOC,count(*) as number_athletes\nfrom athletes\ngroup by NOC\norder by number_athletes desc;\n\n--Calculate total medals won by each country\nselect Team_NOC,Total\nfrom medals\ngroup by Team_NOC,Total;\n\n--calculate the average number of entries by gender for each discipline\nselect Discipline, AVG(Female) AS Avg_female, AVG(Male) AS Avg_Male\nfrom gender\ngroup by Discipline",

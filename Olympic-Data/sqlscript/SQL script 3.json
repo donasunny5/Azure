@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 3",
+	"properties": {
+		"content": {
+			"query": "SELECT * FROM OPENROWSET\n(\n    BULK 'https://azureprojectsdona.dfs.core.windows.net/silver/adventure_calendar/',\n    FORMAT = 'parquet'\n)AS Calendar",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "AdventuresDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

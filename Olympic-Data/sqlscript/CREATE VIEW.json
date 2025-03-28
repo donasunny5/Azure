@@ -1,0 +1,17 @@
+{
+	"name": "CREATE VIEW",
+	"properties": {
+		"content": {
+			"query": "CREATE VIEW GOLD.CALENDAR\nAS \nSELECT * FROM OPENROWSET\n(\n    BULK 'https://azureprojectsdona.dfs.core.windows.net/silver/adventure_calendar/',\n    FORMAT = 'parquet'\n)AS Calendar\n\n\n-----------------------------\n\nCREATE VIEW GOLD.CUSTOMER\nAS \nSELECT * FROM OPENROWSET\n(\n    BULK 'https://azureprojectsdona.dfs.core.windows.net/silver/adventure_customers/',\n    FORMAT = 'parquet'\n)AS CUSTOMER\n\n\n-------------------------------\n\nCREATE VIEW GOLD.CATEGORIES\nAS \nSELECT * FROM OPENROWSET\n(\n    BULK 'https://azureprojectsdona.dfs.core.windows.net/silver/adventure_product_categories/',\n    FORMAT = 'parquet'\n)AS CATEGORIES\n\n\n-------------------------------\n\nCREATE VIEW GOLD.SUBCATEGORIES\nAS \nSELECT * FROM OPENROWSET\n(\n    BULK 'https://azureprojectsdona.dfs.core.windows.net/silver/adventure_product_subcategories/',\n    FORMAT = 'parquet'\n)AS SUBCATEGORIES\n\n--------------------------------\n\n\nCREATE VIEW GOLD.PRODUCTS\nAS \nSELECT * FROM OPENROWSET\n(\n    BULK 'https://azureprojectsdona.dfs.core.windows.net/silver/adventure_products/',\n    FORMAT = 'parquet'\n)AS PRODUCTS\n\n\n----------------------------------\n\n\nCREATE VIEW GOLD.TERRITORIES\nAS \nSELECT * FROM OPENROWSET\n(\n    BULK 'https://azureprojectsdona.dfs.core.windows.net/silver/adventure_territories/',\n    FORMAT = 'parquet'\n)AS TERRITORIES\n\n\n----------------------------------\n\nCREATE VIEW GOLD.SALES\nAS \nSELECT * FROM OPENROWSET\n(\n    BULK 'https://azureprojectsdona.dfs.core.windows.net/silver/sales/',\n    FORMAT = 'parquet'\n)AS SALES",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "AdventuresDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
